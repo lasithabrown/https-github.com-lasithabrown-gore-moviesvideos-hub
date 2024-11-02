@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>script.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+script.js</font>
+</center></td></tr></table>
+<pre><span class="s0">// Blood drop effect function</span>
+<span class="s2">function </span><span class="s1">createBloodDrop() {</span>
+    <span class="s1">const bloodDrop = document.createElement(</span><span class="s3">&quot;div&quot;</span><span class="s1">);</span>
+    <span class="s1">bloodDrop.classList.add(</span><span class="s3">&quot;blood&quot;</span><span class="s1">);</span>
+
+    <span class="s0">// Random position for the drop</span>
+    <span class="s1">const x = Math.random() * window.innerWidth;</span>
+    <span class="s1">const size = Math.random() * </span><span class="s4">10 </span><span class="s1">+ </span><span class="s4">5</span><span class="s1">;</span>
+    <span class="s1">bloodDrop.style.width = `${size}px`;</span>
+    <span class="s1">bloodDrop.style.height = `${size}px`;</span>
+    <span class="s1">bloodDrop.style.left = `${x}px`;</span>
+    <span class="s1">bloodDrop.style.position = </span><span class="s3">'absolute'</span><span class="s1">;</span>
+
+    <span class="s1">document.querySelector(</span><span class="s3">&quot;.blood-effect&quot;</span><span class="s1">).appendChild(bloodDrop);</span>
+
+<span class="s0">// Animate the blood drop</span>
+    <span class="s1">gsap.to(bloodDrop, {</span>
+        <span class="s1">top: window.innerHeight + </span><span class="s4">50</span><span class="s1">,</span>
+        <span class="s1">duration: Math.random() * </span><span class="s4">2 </span><span class="s1">+ </span><span class="s4">2</span><span class="s1">,</span>
+        <span class="s1">ease: </span><span class="s3">&quot;linear&quot;</span><span class="s1">,</span>
+        <span class="s1">onComplete: () =&gt; {</span>
+            <span class="s1">bloodDrop.remove();</span>
+        <span class="s1">}</span>
+    <span class="s1">});</span>
+<span class="s1">}</span>
+
+<span class="s0">// Create blood drops at intervals</span>
+<span class="s1">setInterval(createBloodDrop, </span><span class="s4">300</span><span class="s1">);</span>
+
+
+
+<span class="s0">// Array of movie trailer video URLs</span>
+<span class="s1">const trailers = [</span>
+    <span class="s3">&quot;videos/WRONG TURN 2 DEAD END  OFFICIAL TRAILER 2003720p.mp4&quot;</span><span class="s1">, </span><span class="s0">// Replace with your actual video path</span>
+    <span class="s3">&quot;videos/TERRIFIER 3 Official Trailer 2024 Red band1080p.mp4&quot;</span><span class="s1">,</span>
+    <span class="s0">// Add more trailer URLs here</span>
+<span class="s1">];</span>
+
+<span class="s1">let currentTrailerIndex = </span><span class="s4">0</span><span class="s1">;</span>
+<span class="s1">const trailerVideo = document.getElementById(</span><span class="s3">&quot;trailer-video&quot;</span><span class="s1">);</span>
+
+<span class="s0">// Function to load and play the next trailer</span>
+<span class="s2">function </span><span class="s1">playNextTrailer() {</span>
+    <span class="s0">// Update the video source to the current trailer in the array</span>
+    <span class="s1">trailerVideo.src = trailers[currentTrailerIndex];</span>
+    <span class="s1">trailerVideo.load(); </span><span class="s0">// Load the new video</span>
+    <span class="s1">trailerVideo.play(); </span><span class="s0">// Play the video</span>
+
+    <span class="s0">// Update index to the next trailer, looping back to the start if necessary</span>
+    <span class="s1">currentTrailerIndex = (currentTrailerIndex + </span><span class="s4">1</span><span class="s1">) % trailers.length;</span>
+<span class="s1">}</span>
+
+<span class="s0">// Event listener to play the next trailer when the current one ends</span>
+<span class="s1">trailerVideo.addEventListener(</span><span class="s3">&quot;ended&quot;</span><span class="s1">, playNextTrailer);</span>
+
+<span class="s0">// Initialize by playing the first trailer</span>
+<span class="s1">playNextTrailer()</span>
+
+
+
+
+<span class="s1">document.querySelectorAll(</span><span class="s3">&quot;.movie-card&quot;</span><span class="s1">).forEach(card =&gt; {</span>
+    <span class="s1">card.addEventListener(</span><span class="s3">&quot;mouseenter&quot;</span><span class="s1">, createParticles);</span>
+<span class="s1">});</span>
+
+<span class="s2">function </span><span class="s1">createParticles(event) {</span>
+    <span class="s1">const card = event.currentTarget;</span>
+    <span class="s1">const particleCount = </span><span class="s4">15</span><span class="s1">; </span><span class="s0">// Number of particles</span>
+    <span class="s2">for </span><span class="s1">(let i = </span><span class="s4">0</span><span class="s1">; i &lt; particleCount; i++) {</span>
+        <span class="s1">const particle = document.createElement(</span><span class="s3">&quot;span&quot;</span><span class="s1">);</span>
+        <span class="s1">particle.classList.add(</span><span class="s3">&quot;particle&quot;</span><span class="s1">);</span>
+        <span class="s1">card.appendChild(particle);</span>
+
+        <span class="s0">// Randomize the initial position of each particle</span>
+        <span class="s1">particle.style.left = `${Math.random() * </span><span class="s4">100</span><span class="s1">}%`;</span>
+        <span class="s1">particle.style.top = `${Math.random() * </span><span class="s4">100</span><span class="s1">}%`;</span>
+
+        <span class="s0">// Add random animation</span>
+        <span class="s1">particle.style.animation = `fly </span><span class="s4">0</span><span class="s1">.</span><span class="s4">6</span><span class="s1">s ease-out forwards ${Math.random() * </span><span class="s4">0.3</span><span class="s1">}s`;</span>
+
+        <span class="s0">// Remove particle after animation ends</span>
+        <span class="s1">particle.addEventListener(</span><span class="s3">&quot;animationend&quot;</span><span class="s1">, () =&gt; particle.remove());</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">// Ensure that JavaScript runs after the DOM is fully loaded</span>
+<span class="s1">document.addEventListener(</span><span class="s3">&quot;DOMContentLoaded&quot;</span><span class="s1">, () =&gt; {</span>
+    <span class="s1">const movieCards = document.querySelectorAll(</span><span class="s3">&quot;.movie-card&quot;</span><span class="s1">);</span>
+
+    <span class="s0">// Check if movie cards are found</span>
+    <span class="s2">if </span><span class="s1">(movieCards.length === </span><span class="s4">0</span><span class="s1">) {</span>
+        <span class="s1">console.error(</span><span class="s3">&quot;No movie cards found with class '.movie-card'. Check your HTML structure.&quot;</span><span class="s1">);</span>
+    <span class="s1">}</span>
+
+    <span class="s0">// Add event listeners to each movie card</span>
+    <span class="s1">movieCards.forEach(card =&gt; {</span>
+        <span class="s1">card.addEventListener(</span><span class="s3">&quot;mouseenter&quot;</span><span class="s1">, createParticles);</span>
+    <span class="s1">});</span>
+
+    <span class="s2">function </span><span class="s1">createParticles(event) {</span>
+        <span class="s1">const card = event.currentTarget;</span>
+        <span class="s1">const particleCount = </span><span class="s4">15</span><span class="s1">; </span><span class="s0">// Number of particles</span>
+
+        <span class="s2">for </span><span class="s1">(let i = </span><span class="s4">0</span><span class="s1">; i &lt; particleCount; i++) {</span>
+            <span class="s1">const particle = document.createElement(</span><span class="s3">&quot;span&quot;</span><span class="s1">);</span>
+            <span class="s1">particle.classList.add(</span><span class="s3">&quot;particle&quot;</span><span class="s1">);</span>
+
+            <span class="s0">// Append particle to the card</span>
+            <span class="s1">card.appendChild(particle);</span>
+
+            <span class="s0">// Randomize the initial position of each particle</span>
+            <span class="s1">particle.style.left = `${Math.random() * </span><span class="s4">100</span><span class="s1">}%`;</span>
+            <span class="s1">particle.style.top = `${Math.random() * </span><span class="s4">100</span><span class="s1">}%`;</span>
+
+            <span class="s0">// Add random animation delay</span>
+            <span class="s1">particle.style.animation = `fly </span><span class="s4">0</span><span class="s1">.</span><span class="s4">6</span><span class="s1">s ease-out forwards ${Math.random() * </span><span class="s4">0.3</span><span class="s1">}s`;</span>
+
+            <span class="s0">// Remove particle after animation ends</span>
+            <span class="s1">particle.addEventListener(</span><span class="s3">&quot;animationend&quot;</span><span class="s1">, () =&gt; particle.remove());</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">});</span>
+
+
+<span class="s1">window.addEventListener(</span><span class="s3">&quot;load&quot;</span><span class="s1">, () =&gt; {</span>
+    <span class="s1">document.querySelectorAll(</span><span class="s3">&quot;.movie-card&quot;</span><span class="s1">).forEach((card, index) =&gt; {</span>
+        <span class="s1">card.style.animationDelay = `${</span><span class="s4">0.5 </span><span class="s1">+ index * </span><span class="s4">0.2</span><span class="s1">}s`;</span>
+    <span class="s1">});</span>
+<span class="s1">});</span>
+
+<span class="s1">document.getElementById(</span><span class="s3">&quot;showSecretLinkButton&quot;</span><span class="s1">).addEventListener(</span><span class="s3">&quot;click&quot;</span><span class="s1">, </span><span class="s2">function</span><span class="s1">() {</span>
+    <span class="s1">const password = prompt(</span><span class="s3">&quot;Enter the password to access the secret link:&quot;</span><span class="s1">);</span>
+
+    <span class="s0">// Replace 'yourPassword' with your desired password</span>
+    <span class="s2">if </span><span class="s1">(password === </span><span class="s3">&quot;iknowMR.Deadpool&quot;</span><span class="s1">) {</span>
+        <span class="s1">document.getElementById(</span><span class="s3">&quot;secretLink&quot;</span><span class="s1">).style.display = </span><span class="s3">&quot;block&quot;</span><span class="s1">; </span><span class="s0">// Show the secret link</span>
+        <span class="s1">alert(</span><span class="s3">&quot;Access granted! You can now see the secret link.&quot;</span><span class="s1">);</span>
+    <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+        <span class="s1">alert(</span><span class="s3">&quot;Incorrect password. Try again.&quot;</span><span class="s1">);</span>
+    <span class="s1">}</span>
+<span class="s1">});</span>
+</pre>
+</body>
+</html>

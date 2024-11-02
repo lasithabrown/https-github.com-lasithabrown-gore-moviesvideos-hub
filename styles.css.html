@@ -1,0 +1,340 @@
+<html>
+<head>
+<title>styles.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #2aacb8;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+styles.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* Style the main title */</span>
+<span class="s1">.title {</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">color: #d32f2f;</span>
+    <span class="s1">font-size: </span><span class="s2">2</span><span class="s1">em;</span>
+    <span class="s1">margin-top: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">position: relative;</span>
+    <span class="s1">z-index: </span><span class="s2">3</span><span class="s1">; </span><span class="s0">/* Above Three.js and blood effect */</span>
+<span class="s1">}</span>
+<span class="s0">/* Background video container */</span>
+<span class="s1">.background-video {</span>
+    <span class="s1">position: fixed;</span>
+    <span class="s1">top: </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">left: </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">width: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">height: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">overflow: hidden;</span>
+    <span class="s1">z-index: -</span><span class="s2">1</span><span class="s1">; </span><span class="s0">/* Places it behind all other content */</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Video styling */</span>
+<span class="s1">#trailer-video {</span>
+    <span class="s1">width: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">height: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">object-fit: cover; </span><span class="s0">/* Ensures video covers the entire background */</span>
+    <span class="s1">filter: brightness(</span><span class="s2">50</span><span class="s1">%); </span><span class="s0">/* Darkens the video for contrast with text */</span>
+<span class="s1">}</span>
+
+
+
+<span class="s0">/* Blood drop effect styles */</span>
+
+
+
+<span class="s0">/* Basic styles for the movie card */</span>
+<span class="s1">.movie-card {</span>
+    <span class="s1">position: relative;</span>
+    <span class="s1">overflow: hidden;</span>
+    <span class="s1">width: </span><span class="s2">250</span><span class="s1">px;</span>
+    <span class="s1">height: </span><span class="s2">350</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+    <span class="s1">transition: transform </span><span class="s2">0</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s ease, box-shadow </span><span class="s2">0</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s ease;</span>
+    <span class="s1">box-shadow: </span><span class="s2">0 5</span><span class="s1">px </span><span class="s2">15</span><span class="s1">px rgba(</span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0.3</span><span class="s1">);</span>
+    <span class="s1">cursor: pointer;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Scale and shadow effect on hover */</span>
+<span class="s1">.movie-card:hover {</span>
+    <span class="s1">transform: scale(</span><span class="s2">1.05</span><span class="s1">); </span><span class="s0">/* Slight zoom */</span>
+    <span class="s1">box-shadow: </span><span class="s2">0 10</span><span class="s1">px </span><span class="s2">25</span><span class="s1">px rgba(</span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0.5</span><span class="s1">); </span><span class="s0">/* Deeper shadow */</span>
+<span class="s1">}</span>
+
+
+<span class="s1">}</span>
+
+<span class="s0">/* Particle style */</span>
+<span class="s1">.particle {</span>
+    <span class="s1">position: absolute;</span>
+    <span class="s1">width: </span><span class="s2">6</span><span class="s1">px;</span>
+    <span class="s1">height: </span><span class="s2">6</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">50</span><span class="s1">%;</span>
+    <span class="s1">background-color: rgba(</span><span class="s2">255</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0.8</span><span class="s1">);</span>
+    <span class="s1">pointer-events: none;</span>
+    <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Particle animation */</span>
+<span class="s1">@keyframes fly {</span>
+    <span class="s2">0</span><span class="s1">% {</span>
+        <span class="s1">transform: translate(</span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">);</span>
+        <span class="s1">opacity: </span><span class="s2">1</span><span class="s1">;</span>
+    <span class="s1">}</span>
+    <span class="s2">100</span><span class="s1">% {</span>
+        <span class="s1">transform: translate(calc(</span><span class="s2">40</span><span class="s1">px - </span><span class="s2">80</span><span class="s1">px * var(--x)), calc(</span><span class="s2">40</span><span class="s1">px - </span><span class="s2">80</span><span class="s1">px * var(--y)));</span>
+        <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+<span class="s0">/* Particle style */</span>
+<span class="s1">.particle {</span>
+    <span class="s1">position: absolute;</span>
+    <span class="s1">width: </span><span class="s2">6</span><span class="s1">px;</span>
+    <span class="s1">height: </span><span class="s2">6</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">50</span><span class="s1">%;</span>
+    <span class="s1">background-color: rgba(</span><span class="s2">255</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0.8</span><span class="s1">);</span>
+    <span class="s1">pointer-events: none;</span>
+    <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Particle animation */</span>
+<span class="s1">@keyframes fly {</span>
+    <span class="s2">0</span><span class="s1">% {</span>
+        <span class="s1">transform: translate(</span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">);</span>
+        <span class="s1">opacity: </span><span class="s2">1</span><span class="s1">;</span>
+    <span class="s1">}</span>
+    <span class="s2">100</span><span class="s1">% {</span>
+        <span class="s1">transform: translate(calc(</span><span class="s2">40</span><span class="s1">px - </span><span class="s2">80</span><span class="s1">px * var(--x)), calc(</span><span class="s2">40</span><span class="s1">px - </span><span class="s2">80</span><span class="s1">px * var(--y)));</span>
+        <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+
+
+
+<span class="s0">/* Falling animation */</span>
+<span class="s1">@keyframes fall {</span>
+    <span class="s2">0</span><span class="s1">% {</span>
+        <span class="s1">transform: translateY(-</span><span class="s2">100</span><span class="s1">px); </span><span class="s0">/* Start 100px above */</span>
+        <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">; </span><span class="s0">/* Start transparent */</span>
+    <span class="s1">}</span>
+    <span class="s2">100</span><span class="s1">% {</span>
+        <span class="s1">transform: translateY(</span><span class="s2">0</span><span class="s1">); </span><span class="s0">/* End at original position */</span>
+        <span class="s1">opacity: </span><span class="s2">1</span><span class="s1">; </span><span class="s0">/* End fully visible */</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Apply the fall animation */</span>
+<span class="s1">.movie-card {</span>
+    <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">; </span><span class="s0">/* Initially hidden */</span>
+    <span class="s1">animation: fall </span><span class="s2">1</span><span class="s1">s ease forwards;</span>
+    <span class="s1">animation-delay: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">5</span><span class="s1">s; </span><span class="s0">/* Optional delay before the first animation starts */</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Staggered effect: Delay each card slightly */</span>
+<span class="s1">.movie-card:nth-child(</span><span class="s2">2</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">7</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.movie-card:nth-child(</span><span class="s2">3</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">9</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.movie-card:nth-child(</span><span class="s2">4</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">1</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s0">/* Add more nth-child rules if you have more movie cards */</span>
+
+
+<span class="s0">/* Card container with perspective */</span>
+<span class="s1">.scene-container {</span>
+    <span class="s1">display: grid;</span>
+    <span class="s1">gap: </span><span class="s2">20</span><span class="s1">px; </span><span class="s0">/* Space between cards */</span>
+    <span class="s1">grid-template-columns: repeat(auto-fill, minmax(</span><span class="s2">200</span><span class="s1">px, </span><span class="s2">1</span><span class="s1">fr)); </span><span class="s0">/* Flexible columns */</span>
+    <span class="s1">justify-items: center; </span><span class="s0">/* Center cards horizontally */</span>
+    <span class="s1">margin-top: </span><span class="s2">40</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">position: relative;</span>
+    <span class="s1">z-index: </span><span class="s2">3</span><span class="s1">; </span><span class="s0">/* Above blood effect and Three.js */</span>
+<span class="s1">}</span>
+
+
+<span class="s0">/* Individual cards */</span>
+<span class="s1">.card-3d {</span>
+    <span class="s1">width: </span><span class="s2">100</span><span class="s1">%; </span><span class="s0">/* Automatically scales to fit the grid cell */</span>
+    <span class="s1">max-width: </span><span class="s2">250</span><span class="s1">px; </span><span class="s0">/* Set a maximum width to control card size */</span>
+    <span class="s1">height: </span><span class="s2">300</span><span class="s1">px;</span>
+    <span class="s1">background: #</span><span class="s2">333</span><span class="s1">;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">border-radius: </span><span class="s2">10</span><span class="s1">px;</span>
+    <span class="s1">overflow: hidden;</span>
+    <span class="s1">box-shadow: </span><span class="s2">0</span><span class="s1">px </span><span class="s2">10</span><span class="s1">px </span><span class="s2">20</span><span class="s1">px rgba(</span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, </span><span class="s2">0.5</span><span class="s1">);</span>
+    <span class="s1">transition: transform </span><span class="s2">0</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s ease;</span>
+    <span class="s1">transform-style: preserve-3d;</span>
+<span class="s1">}</span>
+
+<span class="s1">.card-3d img {</span>
+    <span class="s1">width: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">height: auto;</span>
+    <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Style for movie links */</span>
+<span class="s1">.movie-link {</span>
+    <span class="s1">display: inline-block;</span>
+    <span class="s1">margin-top: </span><span class="s2">10</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s2">8</span><span class="s1">px </span><span class="s2">15</span><span class="s1">px;</span>
+    <span class="s1">background-color: #d32f2f;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">text-decoration: none;</span>
+    <span class="s1">border-radius: </span><span class="s2">5</span><span class="s1">px;</span>
+    <span class="s1">font-weight: bold;</span>
+    <span class="s1">transition: background-color </span><span class="s2">0</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s ease;</span>
+<span class="s1">}</span>
+
+<span class="s1">.movie-link:hover {</span>
+    <span class="s1">background-color: #b71c1c;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Three.js canvas (background layer) */</span>
+<span class="s1">canvas {</span>
+    <span class="s1">position: fixed;</span>
+    <span class="s1">top: </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">left: </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">width: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">height: </span><span class="s2">100</span><span class="s1">%;</span>
+    <span class="s1">z-index: </span><span class="s2">1</span><span class="s1">; </span><span class="s0">/* Behind everything else */</span>
+<span class="s1">}</span>
+<span class="s0">/* Falling animation */</span>
+<span class="s1">@keyframes fall {</span>
+    <span class="s2">0</span><span class="s1">% {</span>
+        <span class="s1">transform: translateY(-</span><span class="s2">100</span><span class="s1">px); </span><span class="s0">/* Start 100px above */</span>
+        <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">; </span><span class="s0">/* Start transparent */</span>
+    <span class="s1">}</span>
+    <span class="s2">100</span><span class="s1">% {</span>
+        <span class="s1">transform: translateY(</span><span class="s2">0</span><span class="s1">); </span><span class="s0">/* End at original position */</span>
+        <span class="s1">opacity: </span><span class="s2">1</span><span class="s1">; </span><span class="s0">/* End fully visible */</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Apply the fall animation */</span>
+<span class="s1">.card-3d {</span>
+    <span class="s1">opacity: </span><span class="s2">0</span><span class="s1">; </span><span class="s0">/* Initially hidden */</span>
+    <span class="s1">animation: fall </span><span class="s2">1</span><span class="s1">s ease forwards;</span>
+    <span class="s1">animation-delay: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">5</span><span class="s1">s; </span><span class="s0">/* Optional delay before the first animation starts */</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Staggered effect: Delay each card slightly */</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">2</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">7</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">3</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">9</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">4</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">1</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">5</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">5</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">5</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">6</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">7</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">7</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">9</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">8</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">2</span><span class="s1">.</span><span class="s2">1</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">9</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">2</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">10</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">2</span><span class="s1">.</span><span class="s2">5</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">11</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">2</span><span class="s1">.</span><span class="s2">7</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">12</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">2</span><span class="s1">.</span><span class="s2">9</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s1">.card-3d:nth-child(</span><span class="s2">13</span><span class="s1">) {</span>
+    <span class="s1">animation-delay: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">3</span><span class="s1">s;</span>
+<span class="s1">}</span>
+<span class="s0">/* Add more nth-child rules if you have more movie cards */</span>
+
+
+
+
+
+<span class="s0">/* Base styles for the title */</span>
+<span class="s1">.fire-title {</span>
+    <span class="s1">font-family: </span><span class="s3">&quot;Impact&quot;</span><span class="s1">, sans-serif;</span>
+    <span class="s1">font-size: </span><span class="s2">3</span><span class="s1">em;</span>
+    <span class="s1">color: #ff6a00; </span><span class="s0">/* Softer orange */</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">margin-top: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">position: relative;</span>
+    <span class="s1">animation: gentleFlicker </span><span class="s2">2</span><span class="s1">s ease-in-out infinite;</span>
+    <span class="s1">text-shadow: </span><span class="s2">0 0 8</span><span class="s1">px #ff6a00, </span><span class="s2">0 0 15</span><span class="s1">px #ff8c00;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Gentle flicker animation */</span>
+<span class="s1">@keyframes gentleFlicker {</span>
+    <span class="s2">0</span><span class="s1">%, </span><span class="s2">100</span><span class="s1">% {</span>
+        <span class="s1">opacity: </span><span class="s2">1</span><span class="s1">;</span>
+        <span class="s1">text-shadow: </span><span class="s2">0 0 8</span><span class="s1">px #ff6a00, </span><span class="s2">0 0 15</span><span class="s1">px #ff8c00;</span>
+    <span class="s1">}</span>
+    <span class="s2">50</span><span class="s1">% {</span>
+        <span class="s1">opacity: </span><span class="s2">0.9</span><span class="s1">;</span>
+        <span class="s1">text-shadow: </span><span class="s2">0 0 10</span><span class="s1">px #ff4500, </span><span class="s2">0 0 18</span><span class="s1">px #ff6a00;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+
+<span class="s1">.author-name {</span>
+    <span class="s1">font-family: </span><span class="s3">&quot;Arial&quot;</span><span class="s1">, sans-serif;</span>
+    <span class="s1">font-size: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">2</span><span class="s1">em;</span>
+    <span class="s1">color: #ffcc99; </span><span class="s0">/* Light color to complement the fire effect */</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">margin-top: </span><span class="s2">10</span><span class="s1">px;</span>
+    <span class="s1">opacity: </span><span class="s2">0.8</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+
+<span class="s1">.secret-link-section {</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">margin-top: </span><span class="s2">30</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">#showSecretLinkButton {</span>
+    <span class="s1">padding: </span><span class="s2">10</span><span class="s1">px </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">font-size: </span><span class="s2">1</span><span class="s1">em;</span>
+    <span class="s1">background-color: #ff4500; </span><span class="s0">/* Fiery color */</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">border: none;</span>
+    <span class="s1">cursor: pointer;</span>
+    <span class="s1">border-radius: </span><span class="s2">5</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">#showSecretLinkButton:hover {</span>
+    <span class="s1">background-color: #ff8c00; </span><span class="s0">/* Lighter orange on hover */</span>
+<span class="s1">}</span>
+
+<span class="s1">#secretLink {</span>
+    <span class="s1">display: block;</span>
+    <span class="s1">margin-top: </span><span class="s2">15</span><span class="s1">px;</span>
+    <span class="s1">font-size: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">5</span><span class="s1">em;</span>
+    <span class="s1">color: #ff4500;</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

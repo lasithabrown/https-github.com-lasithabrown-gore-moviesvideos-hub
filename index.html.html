@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Gore Movie Hub</span><span class="s0">&lt;/title&gt;</span>
+
+    <span class="s4">&lt;!-- GSAP and Three.js CDNs --&gt;</span>
+    <span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+    <span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+
+    <span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s2">href</span><span class="s3">=&quot;styles.css&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+
+<span class="s0">&lt;h1 </span><span class="s2">class</span><span class="s3">=&quot;fire-title&quot;</span><span class="s0">&gt;</span><span class="s1">Welcome to Gore Movie Hub</span><span class="s0">&lt;/h1&gt;</span>
+<span class="s0">&lt;h2 </span><span class="s2">class</span><span class="s3">=&quot;author-name&quot;</span><span class="s0">&gt;</span><span class="s1">Created by [Anton Lasitha]</span><span class="s0">&lt;/h2&gt;</span>
+
+     <span class="s4">&lt;!-- Background video container --&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;background-video&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;video </span><span class="s2">id</span><span class="s3">=&quot;trailer-video&quot; </span><span class="s2">muted autoplay loop</span><span class="s0">&gt;&lt;/video&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+
+    <span class="s0">&lt;h1 </span><span class="s2">class</span><span class="s3">=&quot;title&quot;</span><span class="s0">&gt;</span><span class="s1">Welcome to Gore Movie Hub</span><span class="s0">&lt;/h1&gt;</span>
+
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;scene-container&quot;</span><span class="s0">&gt;</span>
+        <span class="s4">&lt;!-- Movie Card 1 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/terrifier-3-poster-cropped.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 1&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Terrifier 3 gore</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;p&gt;</span><span class="s1">Was bored  to write a fking Description</span><span class="s0">&lt;/p&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/terrifier-3-2024&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/Dead-Alive-Lawnmower-Massacre.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Dead Alive AKA Brain Dead</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">90s very Gory Movie</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/dead-alive-1992&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Cannibal Holocaust gore</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">One of the most gory cannibal movies ever</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/cannibal-holocaust-1980&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_1.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Wrong turn 2 Super GORY</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">A group of Cannibal Brothers eating victims Alive</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/wrong-turn-2-dead-end-2007&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_3.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Green Inferno</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">Was bored again to write a description</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/the-green-inferno-2013&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_4.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">grotesque 2009 MOST Gore</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;p&gt;</span><span class="s1">MOST GORE YOU'LL EVER SEE IN YOUR LIFE</span><span class="s0">&lt;/p&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/grotesque-2009&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_8.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">cannibal ferox</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">90s Very Gory movie</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/cannibal-ferox-1981&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_5.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Hostel 1</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">A movie which you will never forget</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/hostel-2005&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_7.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Wrong turn 6</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">MORE GORE MORE CANNIBALISM</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/wrong-turn-6-last-resort-2014&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+        <span class="s4">&lt;!-- Movie Card 2 --&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;card-3d&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/img_6.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Movie 2&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;h3&gt;</span><span class="s1">Hostel 3</span><span class="s0">&lt;/h3&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;p&gt;</span><span class="s1">Same gore torture as the 1st movie but more gore included</span><span class="s0">&lt;/p&gt;&lt;/center&gt;</span>
+            <span class="s0">&lt;center&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://yts.mx/movies/hostel-part-iii-2011&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">class</span><span class="s3">=&quot;movie-link&quot;</span><span class="s0">&gt;</span><span class="s1">Watch Now</span><span class="s0">&lt;/a&gt;&lt;/center&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+
+
+       <span class="s0">&lt;center&gt;&lt;div </span><span class="s2">class</span><span class="s3">=&quot;secret-link-section&quot;</span><span class="s0">&gt;&lt;/center&gt;</span>
+    <span class="s0">&lt;button </span><span class="s2">id</span><span class="s3">=&quot;showSecretLinkButton&quot;</span><span class="s0">&gt;</span><span class="s1">Unlock Secret GORE Link</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;a </span><span class="s2">id</span><span class="s3">=&quot;secretLink&quot; </span><span class="s2">href</span><span class="s3">=&quot;https://watchpeopledie.tv/&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span><span class="s1">Secret GORE Link</span><span class="s0">&lt;/a&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+    <span class="s0">&lt;/div&gt;</span>
+
+    <span class="s0">&lt;script </span><span class="s2">src</span><span class="s3">=&quot;script.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
